@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Carts</h1>
+  <div class="list-group">
+    @for (cart of carts; track cart.id) {
+      <a [routerLink]="['/carts', cart.id]" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Cart #{{ cart.id }}</h5>
+          <small>Total: {{ cart.total | currency }}</small>
+        </div>
+      </a>
+    }
+  </div>
+</div>
